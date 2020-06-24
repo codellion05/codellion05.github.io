@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	 <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="all_products_admin.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+
+
+
+	<title>All Products</title>
+</head>
+<body>
+    <header>
+        <nav> 
+              <div class="nav-wrapper indigo" id="navbar">
+           
+                 <!-- Search Bar-->
+                 <form id="search_form">
+                   <span class="input-field">
+                     <input id="search" type="search" required >
+                     <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                   </span>
+                 </form>
+
+                 <!-- Dropdown Button-->
+                 <a class='dropdown-trigger btn center' href='#' data-target='dropdown1' style="margin: 10px;">Filters</a>
+                 
+                 <!-- Dropdown Structure -->
+                 <ul id='dropdown1' class='dropdown-content'>
+                   <li class="filtercategory" id="all"><a href="#!">All</a></li>				  	
+                   <li class="filtercategory" id="vegetables"><a href="#!">Vegetables</a></li>
+                   <li class="filtercategory" id="fruits"><a href="#!">Fruits</a></li>
+                   <li class="filtercategory" id="others"><a href="#!">Other</a></li>
+                 </ul>
+        
+         </nav>
+   </header>
+
+    <div class="container" id = "Show">
+        
+            <div id = "Fruits">
+
+            </div>
+            <div id = "Vegetables">
+
+            </div>
+            <div id = "Others">
+
+            </div>
+        
+    </div>
+   
+
+    <script type="text/javascript">
+	
+        var dropdowns = document.querySelectorAll('.dropdown-trigger')
+    for (var i = 0; i < dropdowns.length; i++){
+        M.Dropdown.init(dropdowns[i]);
+    }
+    
+    </script>
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+ <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-app.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-auth.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-firestore.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-storage.js"></script>
+
+ <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+ <script src="https://www.gstatic.com/firebasejs/7.15.1/firebase-analytics.js"></script>
+
+ <script>
+ // Your web app's Firebase configuration
+ var firebaseConfig = {
+     apiKey: "AIzaSyBNuyR1kYlUE47dRdvSwH_ktun0aJdmnIw",
+     authDomain: "codellion-project.firebaseapp.com",
+     databaseURL: "https://codellion-project.firebaseio.com",
+     projectId: "codellion-project",
+     storageBucket: "codellion-project.appspot.com",
+     messagingSenderId: "115691137424",
+     appId: "1:115691137424:web:6512ab76b92862f9302b15",
+     measurementId: "G-QDVW8S0KLN"
+ };
+ // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+ firebase.analytics();
+ </script>
+
+ 
+
+ <script src="./ViewProducts.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="all_products_admin.js"></script>
+  
+</body>
+</html>
